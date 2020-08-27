@@ -3,6 +3,7 @@ package com.sonu.springboot.Controller;
 import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
@@ -21,7 +22,7 @@ public class TaskController {
         return "addition";
     }
 	@GetMapping("/addition")
-	public String home(HttpServletRequest req) {
+	public String home(HttpServletRequest req,HttpServletResponse httpResponse) {
 		HttpSession session = req.getSession();
 		String number1=req.getParameter("number1");
 		String number2=req.getParameter("number2");
@@ -39,7 +40,7 @@ public class TaskController {
         return "subtract";
     }
 	@GetMapping("/subtraction")
-	public String subtraction(HttpServletRequest req) {
+	public String subtraction(HttpServletRequest req,HttpServletResponse httpResponse) {
 		HttpSession session = req.getSession();
 		String number1=req.getParameter("number1");
 		String number2=req.getParameter("number2");
@@ -57,7 +58,7 @@ public class TaskController {
         return "division";
     }
 	@GetMapping("/div")
-	public String division(HttpServletRequest req) {
+	public String division(HttpServletRequest req,HttpServletResponse httpResponse) {
 		HttpSession session = req.getSession();
 		String number1=req.getParameter("number1");
 		String number2=req.getParameter("number2");
@@ -75,7 +76,7 @@ public class TaskController {
         return "random";
     }
 	@GetMapping("/ran")
-	public String random(HttpServletRequest req) {
+	public String random(HttpServletRequest req,HttpServletResponse httpResponse) {
 		HttpSession session = req.getSession();
 		int range=0;
 		if(req.getParameter("count").equals("")) {
