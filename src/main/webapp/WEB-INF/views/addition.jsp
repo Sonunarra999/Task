@@ -5,16 +5,15 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-
 </head>
 <body>
-<form action="/addition">
+<form action="/addition" >
   <label for="number1">Number1</label>
   <input type="text" name="number1" ><br>
   <label for="number2">Number2</label>
   <input type="text" name= "number2"><br>
   <input type="submit" value="Submit">
 </form>
-
+<h1>${sessionScope.Result1}   ${sessionScope.Result2 }</h1>
 </body>
 </html>

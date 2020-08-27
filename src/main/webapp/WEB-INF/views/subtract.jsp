@@ -14,6 +14,7 @@
   <input type="text" name= "number2"><br>
   <input type="submit" value="Submit">
 </form>
+<h1>${sessionScope.Result1}   ${sessionScope.Result2 }</h1>
 
 </body>
 </html>

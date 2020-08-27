@@ -18,7 +18,7 @@ public class TaskController {
 	@GetMapping("/add")
     public String addition() {
         System.out.println("Going home...");
-        return "index";
+        return "addition";
     }
 	@GetMapping("/addition")
 	public String home(HttpServletRequest req) {
@@ -28,12 +28,12 @@ public class TaskController {
 		int number3 = Integer.parseInt(number1)+Integer.parseInt(number2);
 		session.setAttribute("Result1", "Addition");
 		session.setAttribute("Result2", number3);
-		return "Final";
+		return "addition";
 		
 		
 		
 	}
-	@GetMapping("/sub")
+	@GetMapping("/subtract")
     public String subtract() {
         System.out.println("Going home...");
         return "subtract";
@@ -46,17 +46,17 @@ public class TaskController {
 		int number3 = Integer.parseInt(number1)-Integer.parseInt(number2);
 		session.setAttribute("Result1", "Subtraction");
 		session.setAttribute("Result2", number3);
-		return "Final";
+		return "subtract";
 		
 		
 		
 	}
-	@GetMapping("/div")
+	@GetMapping("/division")
     public String division() {
         System.out.println("Going home...");
         return "division";
     }
-	@GetMapping("/division")
+	@GetMapping("/div")
 	public String division(HttpServletRequest req) {
 		HttpSession session = req.getSession();
 		String number1=req.getParameter("number1");
@@ -64,7 +64,7 @@ public class TaskController {
 		int number3 = Integer.parseInt(number1)/Integer.parseInt(number2);
 		session.setAttribute("Result1", "Division");
 		session.setAttribute("Result2", number3);
-		return "Final";
+		return "division";
 		
 		
 		
@@ -101,7 +101,7 @@ public class TaskController {
 			
 		}
 		session.setAttribute("Result2", list);
-		return "Final";
+		return "random";
 		
 		
 		
