@@ -7,11 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="/ran">
-  <label for="count">Enter the count:</label>
-  <input type="text" name="count" ><br>
-  <input type="submit" value="Submit">
-</form>
-
+<h1>${sessionScope.Result1}   ${sessionScope.Result2 }</h1>
 </body>
 </html>

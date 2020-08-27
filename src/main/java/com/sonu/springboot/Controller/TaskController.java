@@ -29,7 +29,7 @@ public class TaskController {
 		int number3 = Integer.parseInt(number1)+Integer.parseInt(number2);
 		session.setAttribute("Result1", "Addition");
 		session.setAttribute("Result2", number3);
-		return "addition";
+		return "final";
 		
 		
 		
@@ -47,7 +47,7 @@ public class TaskController {
 		int number3 = Integer.parseInt(number1)-Integer.parseInt(number2);
 		session.setAttribute("Result1", "Subtraction");
 		session.setAttribute("Result2", number3);
-		return "subtract";
+		return "final";
 		
 		
 		
@@ -65,7 +65,7 @@ public class TaskController {
 		int number3 = Integer.parseInt(number1)/Integer.parseInt(number2);
 		session.setAttribute("Result1", "Division");
 		session.setAttribute("Result2", number3);
-		return "division";
+		return "final";
 		
 		
 		
@@ -102,7 +102,7 @@ public class TaskController {
 			
 		}
 		session.setAttribute("Result2", list);
-		return "random";
+		return "final";
 		
 		
 		
