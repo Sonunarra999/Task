@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="/division">
+<form action="/myapp/division">
   <label for="number1">Number1</label>
   <input type="text" name="number1" ><br>
   <label for="number2">Number2</label>

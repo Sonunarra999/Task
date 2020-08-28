@@ -21,7 +21,7 @@ public class TaskController {
         System.out.println("Going home...");
         return "addition";
     }
-	@GetMapping("/addition")
+	@GetMapping("/myapp/addition")
 	public String home(HttpServletRequest req,HttpServletResponse httpResponse) {
 		HttpSession session = req.getSession();
 		String number1=req.getParameter("number1");
@@ -39,7 +39,7 @@ public class TaskController {
         System.out.println("Going home...");
         return "subtract";
     }
-	@GetMapping("/subtraction")
+	@GetMapping("/myapp/subtraction")
 	public String subtraction(HttpServletRequest req,HttpServletResponse httpResponse) {
 		HttpSession session = req.getSession();
 		String number1=req.getParameter("number1");
@@ -57,7 +57,7 @@ public class TaskController {
         System.out.println("Going home...");
         return "division";
     }
-	@GetMapping("/div")
+	@GetMapping("/myapp/div")
 	public String division(HttpServletRequest req,HttpServletResponse httpResponse) {
 		HttpSession session = req.getSession();
 		String number1=req.getParameter("number1");
@@ -75,7 +75,7 @@ public class TaskController {
         System.out.println("Going home...");
         return "random";
     }
-	@GetMapping("/ran")
+	@GetMapping("/myapp/ran")
 	public String random(HttpServletRequest req,HttpServletResponse httpResponse) {
 		HttpSession session = req.getSession();
 		int range=0;

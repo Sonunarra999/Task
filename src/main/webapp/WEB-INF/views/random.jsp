@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="/ran">
+<form action="/myapp/ran">
   <label for="count">Enter the count:</label>
   <input type="text" name="count" ><br>
   <input type="submit" value="Submit">
