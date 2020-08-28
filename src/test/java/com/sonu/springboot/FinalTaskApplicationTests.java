@@ -1,4 +1,5 @@
 package com.sonu.springboot;
+
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -17,26 +18,35 @@ class FinalTaskApplicationTests {
 	TaskController st;
 
 	@Test
-	void AdditionTestcase() {
+	void AdditionTestcase() throws Exception {
+		MockMvc mockmvc = MockMvcBuilders.standaloneSetup(st).build();
+		mockmvc.perform(get("/addition?a=1&b=2")).andExpect(status().isOk());
 		
 		
 		
 		
 	}
 	@Test
-	void SubtractionTestcase() {
+	void SubtractionTestcase() throws Exception{
+		MockMvc mockmvc = MockMvcBuilders.standaloneSetup(st).build();
+		mockmvc.perform(get("/subtraction?a=1&b=2")).andExpect(status().isOk());
 		
 		
 		
 	}
 	@Test
-	void DivisionTestcase() {
+	void DivisionTestcase() throws Exception {
+		MockMvc mockmvc = MockMvcBuilders.standaloneSetup(st).build();
+		mockmvc.perform(get("/div?a=1&b=2")).andExpect(status().isOk());
 		
 		
 	}
 @Test
-	void RandomTestcase() {
-		
+	void RandomTestcase() throws Exception {
+	MockMvc mockmvc = MockMvcBuilders.standaloneSetup(st).build();
+	mockmvc.perform(get("/ran?count=10")).andExpect(status().isOk());
+	
+	
 		
 		
 	}
