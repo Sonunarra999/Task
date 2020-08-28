@@ -9,19 +9,25 @@ import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 
 @Controller
+
 public class TaskController {
-	
+	@GetMapping("/")
+	public String home() {
+		return "WelcomeHome";
+	}
 	@GetMapping("/add")
     public String addition() {
         System.out.println("Going home...");
         return "addition";
     }
-	@GetMapping("/myapp/addition")
+	@GetMapping("/addition")
 	public String home(HttpServletRequest req,HttpServletResponse httpResponse) {
 		HttpSession session = req.getSession();
 		String number1=req.getParameter("number1");
@@ -39,7 +45,7 @@ public class TaskController {
         System.out.println("Going home...");
         return "subtract";
     }
-	@GetMapping("/myapp/subtraction")
+	@GetMapping("/subtraction")
 	public String subtraction(HttpServletRequest req,HttpServletResponse httpResponse) {
 		HttpSession session = req.getSession();
 		String number1=req.getParameter("number1");
@@ -57,7 +63,7 @@ public class TaskController {
         System.out.println("Going home...");
         return "division";
     }
-	@GetMapping("/myapp/div")
+	@GetMapping("/div")
 	public String division(HttpServletRequest req,HttpServletResponse httpResponse) {
 		HttpSession session = req.getSession();
 		String number1=req.getParameter("number1");
@@ -75,7 +81,7 @@ public class TaskController {
         System.out.println("Going home...");
         return "random";
     }
-	@GetMapping("/myapp/ran")
+	@GetMapping("/ran")
 	public String random(HttpServletRequest req,HttpServletResponse httpResponse) {
 		HttpSession session = req.getSession();
 		int range=0;
