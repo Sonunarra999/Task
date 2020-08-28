@@ -7,11 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
+<h4>This Performs Subtraction</h4>
 <form action="/subtraction">
-  <label for="number1">Number1</label>
-  <input type="text" name="number1" ><br>
-  <label for="number2">Number2</label>
-  <input type="text" name= "number2"><br>
+  <label for="a">a:</label>
+  <input type="text" name="a" ><br>
+  <br>
+  <label for="b">b:</label>
+  <input type="text" name= "b"><br>
+  <br>
   <input type="submit" value="Submit">
 </form>
 

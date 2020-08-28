@@ -30,8 +30,8 @@ public class TaskController {
 	@GetMapping("/addition")
 	public String home(HttpServletRequest req,HttpServletResponse httpResponse) {
 		HttpSession session = req.getSession();
-		String number1=req.getParameter("number1");
-		String number2=req.getParameter("number2");
+		String number1=req.getParameter("a");
+		String number2=req.getParameter("b");
 		int number3 = Integer.parseInt(number1)+Integer.parseInt(number2);
 		session.setAttribute("Result1", "Addition");
 		session.setAttribute("Result2", number3);
@@ -48,8 +48,8 @@ public class TaskController {
 	@GetMapping("/subtraction")
 	public String subtraction(HttpServletRequest req,HttpServletResponse httpResponse) {
 		HttpSession session = req.getSession();
-		String number1=req.getParameter("number1");
-		String number2=req.getParameter("number2");
+		String number1=req.getParameter("a");
+		String number2=req.getParameter("b");
 		int number3 = Integer.parseInt(number1)-Integer.parseInt(number2);
 		session.setAttribute("Result1", "Subtraction");
 		session.setAttribute("Result2", number3);
@@ -65,9 +65,9 @@ public class TaskController {
     }
 	@GetMapping("/div")
 	public String division(HttpServletRequest req,HttpServletResponse httpResponse) {
-		HttpSession session = req.getSession();
-		String number1=req.getParameter("number1");
-		String number2=req.getParameter("number2");
+		HttpSession session = req.getSession();	
+		String number1=req.getParameter("a");
+		String number2=req.getParameter("b");
 		int number3 = Integer.parseInt(number1)/Integer.parseInt(number2);
 		session.setAttribute("Result1", "Division");
 		session.setAttribute("Result2", number3);

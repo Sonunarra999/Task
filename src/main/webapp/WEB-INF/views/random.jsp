@@ -7,9 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+<h4>Random Numbers</h4>
 <form action="/ran">
   <label for="count">Enter the count:</label>
-  <input type="text" name="count" ><br>
+  <input type="text" name="count" ><br><br>
   <input type="submit" value="Submit">
 </form>
 

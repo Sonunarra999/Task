@@ -7,11 +7,15 @@
 <title>Insert title here</title>
 </head>
 <body>
+<h4>This Performs Addition</h4>
 <form action="/addition" method="GET">
-  <label for="number1">Number1</label>
-  <input type="text" name="number1" ><br>
-  <label for="number2">Number2</label>
-  <input type="text" name= "number2"><br>
+
+  <label for="a">a:</label>
+  <input type="text" name="a" ><br>
+  <br>
+  <label for="b">b:</label>
+  <input type="text" name= "b"><br>
+  <br>
   <input type="submit" value="Submit">
 </form>
 
